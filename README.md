@@ -5,3 +5,5 @@ This repo contains the source code for the DevOps Challenge.
 Go Team Salalam
 
 We will win
+
+https://img.shields.io/appveyor/ci/mikepowers-sl/devopschallenge/master
