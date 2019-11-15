@@ -1,9 +1,6 @@
 # File: .github/workflows/azure.yml
 
-on: 
-  release:
-  - created
-
+on: [release]
 
 name: AzureWebAppDeploy
 
