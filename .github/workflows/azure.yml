@@ -16,3 +16,5 @@ jobs:
 
     - run: |
         az group deployment create -g devopschallenge --template-uri https://github.com/mikepowers-sl/devopschallenge/raw/master/aztemplates/linuxwebapp/azuredeploy.json --parameters https://github.com/mikepowers-sl/devopschallenge/raw/master/aztemplates/linuxwebapp/azuredeploy.parameters.json
+        az group deployment create -g devopschallenge --template-uri https://github.com/mikepowers-sl/devopschallenge/raw/master/aztemplates/cosmosdb/azuredeploy.json --parameters https://github.com/mikepowers-sl/devopschallenge/raw/master/aztemplates/cosmosdb/azuredeploy.parameters.json
+        az group deployment create -g devopschallenge --template-uri https://github.com/mikepowers-sl/devopschallenge/raw/master/aztemplates/acr/template.json --parameters https://github.com/mikepowers-sl/devopschallenge/raw/master/aztemplates/acr/parameters.json
