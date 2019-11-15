@@ -27,7 +27,7 @@ jobs:
       
     - uses: azure/webapps-container-deploy@v1
       with:
-        app-name: 'node-rnc'
+        app-name: 'slalom-nodejs-webapp'
         images: 'slalomdevops.azurecr.io/nodeapp:${{ github.sha }}'
     
     - name: Azure logout
