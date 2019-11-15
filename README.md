@@ -6,4 +6,4 @@ Go Team Salalam
 
 We will win
 
-https://img.shields.io/appveyor/ci/mikepowers-sl/devopschallenge/master
+![ci logo](https://img.shields.io/appveyor/ci/mikepowers-sl/devopschallenge/master)
