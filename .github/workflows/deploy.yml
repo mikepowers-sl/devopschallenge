@@ -17,18 +17,18 @@ jobs:
     
     - uses: azure/docker-login@v1
       with:
-        login-server: contoso.azurecr.io
+        login-server: slalomdevops.azurecr.io
         username: ${{ secrets.REGISTRY_USERNAME }}
         password: ${{ secrets.REGISTRY_PASSWORD }}
     
     - run: |
-        docker build . -t contoso.azurecr.io/nodejssampleapp:${{ github.sha }}
-        docker push contoso.azurecr.io/nodejssampleapp:${{ github.sha }} 
+        docker build . -t slalomdevops.azurecr.io/nodeapp:${{ github.sha }}
+        docker push slalomdevops.azurecr.io/nodeapp:${{ github.sha }} 
       
     - uses: azure/webapps-container-deploy@v1
       with:
-        app-name: 'node-rnc'
-        images: 'contoso.azurecr.io/nodejssampleapp:${{ github.sha }}'
+        app-name: 'slalom-nodejs-webapp'
+        images: 'slalomdevops.azurecr.io/nodeapp:${{ github.sha }}'
     
     - name: Azure logout
       run: |
