@@ -1,18 +1,22 @@
 # File: .github/workflows/azure.yml
 
-on: [push]
+on: 
+  release:
+    - created
 
-name: AzureLoginandDeploy
+
+name: AzureWebAppDeploy
 
 jobs:
 
   build-and-deploy:
     runs-on: ubuntu-latest
+    if: 
     steps:
     
     - uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
-    
+
     - run: |
         az group deployment create -g devopschallenge --template-uri https://github.com/mikepowers-sl/devopschallenge/raw/master/aztemplates/linuxwebapp/azuredeploy.json --parameters https://github.com/mikepowers-sl/devopschallenge/raw/master/aztemplates/linuxwebapp/azuredeploy.parameters.json
