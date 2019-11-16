@@ -1,6 +1,11 @@
 # File: .github/workflows/azure.yml
 
-on: [release]
+on:
+  push:
+    branches:
+    - master
+    paths:
+    - '../../aztemplates/provision/**'
 
 name: AzureWebAppDeploy
 
